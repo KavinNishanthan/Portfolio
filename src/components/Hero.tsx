@@ -65,7 +65,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 rounded-full border border-secondary/3 animate-spin-slow opacity-20" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-40">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-20">
 
 
         {/* Status badge */}
@@ -74,7 +74,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <span className="inline-flex items-center gap-2.5 px-3 py-1 rounded-3xl text-sm font-medium bg-accent/8 text-accent-light border border-accent/15  backdrop-blur-sm ">
+          <span className="inline-flex items-center gap-2.5 px-3 py-1 rounded-lg text-sm font-medium bg-accent/8 text-accent-light border border-accent/15  backdrop-blur-sm ">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success" />
@@ -105,12 +105,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 tracking-tight"
+          className="text-5xl sm:text-6xl md:text-8xl font-bold mt-3 mb-3 tracking-tight"
         >
           <span className="gradient-text-hero">Kavin</span>
           <br />
           <span className="gradient-text-hero">Nishanthan</span>
-          <span className="block text-xl sm:text-2xl md:text-3xl text-text-muted font-light mt-3 tracking-widest uppercase">
+          <span className="block text-xl sm:text-3xl md:text-4xl text-shadow-text-muted font-light mt-3 tracking-widest uppercase">
             P D
           </span>
         </motion.h1>
@@ -120,9 +120,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mb-8"
+          className="mb-3"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-bg-card/60 border border-border/50 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-3 rounded-xl bg-bg-card/60 border border-border/50 backdrop-blur-sm">
             <span className="w-3 h-3 rounded-full bg-rose" />
             <span className="w-3 h-3 rounded-full bg-warning" />
             <span className="w-3 h-3 rounded-full bg-success" />
@@ -138,7 +138,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-base md:text-lg text-text-secondary max-w-xl mx-auto mb-10 leading-relaxed"
+          className="text-base md:text-lg text-text-secondary max-w-xl mx-auto mb-4 leading-relaxed"
         >
           Crafting <span className="text-accent-light font-medium">scalable web applications</span> with modern technologies.
           Turning ideas into polished, performant digital experiences.
@@ -165,34 +165,13 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Tech stack strip */}
+
+        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="mt-16 flex items-center justify-center gap-6 text-text-muted text-xs font-mono uppercase tracking-widest"
-        >
-          <span className="hidden sm:block h-px w-12 bg-border" />
-          {["React", "Next.js", "Node.js", "TypeScript"].map((tech, i) => (
-            <motion.span
-              key={tech}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.3 + i * 0.1 }}
-              className="hover:text-accent-light transition-colors cursor-default"
-            >
-              {tech}
-            </motion.span>
-          ))}
-          <span className="hidden sm:block h-px w-12 bg-border" />
-        </motion.div>
-
-        {/* Scroll indicator */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="mt-8 flex items-center justify-center"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -208,7 +187,8 @@ export default function Hero() {
               />
             </div>
           </motion.div>
-        </motion.div> */}
+        </motion.div>
+
       </div>
     </section>
   );

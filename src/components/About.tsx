@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SectionWrapper, { SectionHeading } from "./SectionWrapper";
 
 const highlights = [
-  { value: "5+", label: "Projects Built", icon: "📦" },
+  { value: "2+", label: "Projects Built", icon: "📦" },
   { value: "3+", label: "Tech Stacks", icon: "⚡" },
   { value: "1+", label: "Years Experience", icon: "🚀" },
   { value: "100%", label: "Passion", icon: "❤️" },
@@ -50,7 +50,7 @@ export default function About() {
               </span>
             </div>
 
-            <div className="space-y-4 text-text-secondary leading-relaxed">
+            <div className="space-y-2 text-text-secondary leading-relaxed">
               <p className="text-lg">
                 Hi there! 👋 I&apos;m{" "}
                 <span className="text-accent-light font-semibold">
