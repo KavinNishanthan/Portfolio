@@ -43,18 +43,18 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500  h-18 ${
         isScrolled
-          ? "bg-bg-primary/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/10"
+          ? "bg-bg-primary/80 backdrop-blur-2xl border-b border-border/40 shadow-2xl shadow-black/20"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="w-full px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
           <motion.a
             href="#home"
-            className="text-xl font-bold gradient-text"
+            className="text-xl font-bold gradient-text tracking-tight"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -62,7 +62,7 @@ export default function Navbar() {
           </motion.a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -76,7 +76,7 @@ export default function Navbar() {
                 {activeSection === link.href.slice(1) && (
                   <motion.span
                     layoutId="activeNav"
-                    className="absolute inset-0 bg-accent/10 border border-accent/15 rounded-lg"
+                    className="absolute inset-0 bg-accent/10 border border-accent/20 rounded-lg"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
@@ -88,7 +88,7 @@ export default function Navbar() {
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="ml-4 px-5 py-2 text-sm font-semibold bg-gradient-to-r from-accent to-accent-dark text-white rounded-lg shadow-md shadow-accent/20 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300"
+              className="ml-6 px-5 py-2.5 text-sm font-semibold bg-gradient-to-r from-accent to-accent-dark text-white rounded-lg shadow-md shadow-accent/20 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300"
             >
               Resume
             </motion.a>
@@ -97,7 +97,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center text-text-secondary hover:text-text-primary transition-colors"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center text-text-secondary hover:text-text-primary transition-colors rounded-lg hover:bg-white/5"
             aria-label="Toggle menu"
           >
             <div className="w-5 flex flex-col gap-1.5">
@@ -117,9 +117,9 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-            className="md:hidden bg-bg-primary/95 backdrop-blur-xl border-t border-border/50 overflow-hidden"
+            className="md:hidden bg-bg-primary/95 backdrop-blur-2xl border-t border-border/40 overflow-hidden"
           >
-            <div className="px-4 py-5 space-y-1">
+            <div className="px-6 py-5 space-y-1">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}

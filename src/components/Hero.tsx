@@ -65,7 +65,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 rounded-full border border-secondary/3 animate-spin-slow opacity-20" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center mt-20">
 
 
         {/* Status badge */}

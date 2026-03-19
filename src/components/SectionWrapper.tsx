@@ -15,8 +15,8 @@ export default function SectionWrapper({
   className = "",
 }: SectionWrapperProps) {
   return (
-    <section id={id} className={`relative py-5 md:py-8 ${className}`}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id={id} className={`relative z-10 py-10 md:py-15 bg-bg-primary ${className}`}>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
         {children}
       </div>
     </section>
