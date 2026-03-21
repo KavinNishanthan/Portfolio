@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import SectionWrapper, { SectionHeading } from "./SectionWrapper";
-import { label } from "framer-motion/client";
 
 
 
@@ -11,7 +12,7 @@ const techStack = [
   {
     label: "HTML",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
         className='w-7 h-7'
         alt='HTML'
@@ -21,7 +22,7 @@ const techStack = [
   {
     label: "CSS",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
         className='w-7 h-7'
         alt='CSS'
@@ -31,7 +32,7 @@ const techStack = [
   {
     label: "JavaScript",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
         className='w-7 h-7'
         alt='JS'
@@ -41,7 +42,7 @@ const techStack = [
   {
     label: "React JS",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
         className='w-7 h-7'
         alt='React'
@@ -51,7 +52,7 @@ const techStack = [
   {
     label: "Next Js",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
         className='w-7 h-7 bg-white rounded'
         alt='Next.js'
@@ -61,7 +62,7 @@ const techStack = [
   {
     label: "Tailwind CSS",
     icon: (
-      <img
+      <Image
         src='https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg'
         className='w-7 h-7'
         alt='Tailwind'
@@ -73,7 +74,7 @@ const techStack = [
   {
     label: "Node JS",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
         className='w-7 h-7'
         alt='Node'
@@ -83,7 +84,7 @@ const techStack = [
   {
     label: "Express JS",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
         className='w-7 h-7 bg-white'
         alt='Express'
@@ -93,7 +94,7 @@ const techStack = [
   {
     label: "Java",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'
         className='w-7 h-7'
         alt='Java'
@@ -103,7 +104,7 @@ const techStack = [
   {
     label: "Python",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
         className='w-7 h-7'
         alt='Python'
@@ -114,7 +115,7 @@ const techStack = [
   {
     label: "MongoDB",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
         className='w-7 h-7'
         alt='MongoDB'
@@ -124,7 +125,7 @@ const techStack = [
   {
     label: "MySQL",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
         className='w-7 h-7'
         alt='MySQL'
@@ -132,11 +133,11 @@ const techStack = [
     ),
   },
 
-  // 🔹 Tools
+  // Tools
   {
     label: "Git",
     icon: (
-      <img
+      <Image
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'
         className='w-7 h-7'
         alt='Git'
@@ -146,7 +147,7 @@ const techStack = [
   {
     label: "Postman",
     icon: (
-      <img
+      <Image
         src='https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg'
         className='w-7 h-7'
         alt='Postman'
@@ -207,30 +208,6 @@ export default function About() {
                   </svg>
                   <span className='font-semibold text-sm'>Resume</span>
                 </motion.a>
-                {/* <motion.a
-                href='/resume.pdf'
-                download
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className='flex items-center justify-center gap-1 glass-card rounded-lg p-2 text-accent-light hover:border-accent/30 transition-all duration-300 group cursor-pointer'>
-                <svg
-                  className='w-3 h-3 group-hover:translate-y-0.5 transition-transform'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
-                  />
-                </svg>
-                <span className='font-semibold text-sm'>Download Resume</span>
-              </motion.a> */}
               </div>
 
               <div className='space-y-2.5 text-text-secondary leading-relaxed'>
@@ -293,83 +270,6 @@ export default function About() {
                     </span>
                   </div>
                 ))}
-                {/* <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div>
-                <div className='flex items-center justify-center'>
-                  <img
-                    src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                    className='w-8 h-8'
-                    alt='React'
-                  />
-                </div> */}
               </div>
             </div>
           </motion.div>

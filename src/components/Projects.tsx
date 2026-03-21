@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper, { SectionHeading } from "./SectionWrapper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,14 +12,13 @@ import {
   Autoplay,
 } from "swiper/modules";
 
-type ProjectCategory = "All" | "Full Stack" | "Frontend";
 
 interface Project {
   title: string;
   description: string;
   longDescription: string;
   tech: string[];
-  category: ProjectCategory[];
+  category: string[];
   github: string;
   demo: string;
   features: string[];
@@ -72,24 +70,14 @@ const projects: Project[] = [
   },
 ];
 
-const categories: ProjectCategory[] = ["All", "Full Stack", "Frontend"];
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState<ProjectCategory>("All");
-
-  const filteredProjects = projects.filter((project) =>
-    project.category.includes(activeCategory),
-  );
-
   // Swiper needs more slides than `slidesPerView` to loop seamlessly.
   // If we have very few projects (like 1 or 2), we gracefully duplicate them for the infinite loop effect.
   const displayProjects =
-    filteredProjects.length > 0 && filteredProjects.length < 4
-      ? [...filteredProjects, ...filteredProjects, ...filteredProjects].slice(
-        0,
-        4,
-      )
-      : filteredProjects;
+    projects.length > 0 && projects.length < 4
+      ? [...projects, ...projects, ...projects].slice(0, 4)
+      : projects;
 
   return (
     <SectionWrapper id='projects'>
@@ -130,7 +118,6 @@ export default function Projects() {
               spaceBetween: 60,
             },
           }}
-
           autoplay={{
             delay: 1000,
             disableOnInteraction: false,
@@ -148,8 +135,7 @@ export default function Projects() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7, delay: idx * 0.1 }}
                 className='w-full flex justify-center'>
-                <div
-                  className='group w-[90%] sm:w-full mx-auto bg-background/40 backdrop-blur-xl rounded-xl border border-border/50 shadow-2xl transition-all duration-500 hover:border-accent/40 hover:shadow-[0_0_30px_rgba(var(--accent-rgb),0.1)] flex flex-col lg:flex-row h-auto lg:min-h-120'>
+                <div className='group w-[90%] sm:w-full mx-auto bg-background/40 backdrop-blur-xl rounded-xl border border-border/50 shadow-2xl transition-all duration-500 hover:border-accent/40 hover:shadow-[0_0_30px_rgba(var(--accent-rgb),0.1)] flex flex-col lg:flex-row h-auto lg:min-h-120'>
                   {/* LEFT CONTENT (Info & Details) */}
                   <div className='w-full lg:w-[50%] xl:w-[50%] p-8 lg:p-10 flex flex-col grow relative z-10'>
                     <div className='flex-1'>
