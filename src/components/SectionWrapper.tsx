@@ -17,7 +17,7 @@ export default function SectionWrapper({
   return (
     <section
       id={id}
-      className={`relative z-10 py-12 md:py-14 bg-bg-primary ${className}`}>
+      className={`relative z-10 py-12 md:py-11 bg-bg-primary overflow-hidden ${className}`}>
       <div className='max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10'>
         {children}
       </div>
@@ -72,7 +72,7 @@ export function SectionHeading({
           {description}
         </p>
       )}
-      <div className='mt-10  mb-10 section-divider max-w-xs mx-auto' />
+      <div className='mt-10 section-divider max-w-xs mx-auto' />
     </motion.div>
   );
 }

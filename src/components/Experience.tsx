@@ -7,15 +7,14 @@ const experiences = [
   {
     role: "Software Developer Intern",
     company: "Record",
-    period: "2024 – Present",
+    period: "AUG - 2024 to OCT - 2024",
     type: "Internship",
     description:
       "Contributing to full-stack development initiatives, building and maintaining scalable web applications using modern frameworks and best practices.",
     achievements: [
-      "Built and shipped production-ready features using React and Node.js, improving user experience for 500+ users",
-      "Designed and implemented RESTful APIs with Express.js, reducing data fetch times by 40%",
-      "Optimized application performance through code splitting and lazy loading, reducing page load times by 30%",
-      "Participated in agile development cycles, conducting code reviews and establishing coding best practices",
+      "Built a skill-tracking and digital portfolio system for students.",
+      "Implemented functionality to fetch, parse, and organize playlist data into modules and trackable lessons.",
+      "Contributed to features that track user learning activities and organize them into a structured dashboard",
       "Developed responsive UI components reused across 5+ product pages, improving development velocity",
     ],
     skills: ["React", "Node.js", "Express.js", "MongoDB", "Git"],
@@ -56,7 +55,7 @@ export default function Experience() {
             <div className="md:ml-20 glass-card-glow rounded-2xl overflow-hidden">
               {/* Gradient top bar */}
               <div className={`h-1 bg-gradient-to-r ${exp.color}`} />
-              
+
               <div className="p-7">
                 {/* Header */}
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-5">

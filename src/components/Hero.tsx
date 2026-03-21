@@ -40,7 +40,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay"
+      className="relative z-0 min-h-screen flex items-center justify-center overflow-hidden noise-overlay"
     >
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-grid" />
